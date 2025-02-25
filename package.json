@@ -3,7 +3,7 @@
     "start-server": "go run server/main.go",
     "start": "concurrently \"cd server && go run main.go\" \"cd client && npm run start\"",
     "dev": "concurrently \"cd server && go run main.go\" \"cd client && npm run dev\"",
-    "install": "cd server && npm i && cd ../client && npm i",
+    "install": "cd server && go mod tidy && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
